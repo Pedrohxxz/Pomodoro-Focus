@@ -1,40 +1,85 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="color-scheme" content="dark">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍅</text></svg>">
-<title>Pomodoro Focus</title>
-<link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-<main>
-  <header><h1>Pomodoro <span>Focus</span></h1><div class="pill" id="cycles">0 ciclos</div></header>
-  <div class="tabs"><div id="tF" class="on">Foco</div><div id="tB">Descanso</div></div>
-  <div class="ring">
-    <svg viewBox="0 0 120 120"><circle class="bg" cx="60" cy="60" r="54"/><circle class="fg" id="fg" cx="60" cy="60" r="54"/></svg>
-    <div class="time"><b id="clock">20:00</b><small id="label">Hora de focar</small></div>
-  </div>
-  <div class="ctrl">
-    <button id="reset" title="Reiniciar">↺</button>
-    <button class="main" id="go">Iniciar</button>
-    <button id="skip" title="Pular">⏭</button>
-  </div>
-  <div class="card">
-    <h2>Alarmes personalizados</h2>
-    <div class="row"><div class="n">Início do descanso<small id="nB">Som padrão</small></div>
-      <div class="a"><button data-p="break">▶</button><label class="btn">Escolher<input type="file" accept="audio/*" data-k="break"></label><button data-r="break">✕</button></div></div>
-    <div class="row"><div class="n">Voltar ao foco<small id="nF">Som padrão</small></div>
-      <div class="a"><button data-p="focus">▶</button><label class="btn">Escolher<input type="file" accept="audio/*" data-k="focus"></label><button data-r="focus">✕</button></div></div>
-  </div>
-  <div class="card">
-    <h2>Tempos (minutos)</h2>
-    <div class="row"><span class="n">Foco</span><input type="number" id="iF" min="1" max="120" value="20"></div>
-    <div class="row"><span class="n">Descanso</span><input type="number" id="iB" min="1" max="60" value="5"></div>
-  </div>
-  <p class="hint">Os sons e tempos ficam salvos neste navegador. Mantenha a aba aberta para ouvir os alarmes.</p>
-</main>
-<script src="js/script.js"></script>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="color-scheme" content="dark" />
+    <link favicon="favicon.svg" type="image/svg+xml" rel="icon" href="" />
+    <title>Pomodoro Focus</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Pomodoro <span>Focus</span></h1>
+        <div class="pill" id="cycles">0 ciclos</div>
+      </header>
+      <div class="tabs">
+        <div id="tF" class="on">Foco</div>
+        <div id="tB">Descanso</div>
+      </div>
+      <div class="ring">
+        <svg viewBox="0 0 120 120">
+          <circle class="bg" cx="60" cy="60" r="54" />
+          <circle class="fg" id="fg" cx="60" cy="60" r="54" />
+        </svg>
+        <div class="time">
+          <b id="clock">20:00</b><small id="label">Hora de focar</small>
+        </div>
+      </div>
+      <div class="ctrl">
+        <button id="reset" title="Reiniciar">↺</button>
+        <button class="main" id="go">Iniciar</button>
+        <button id="skip" title="Pular">▶|</button>
+      </div>
+      <div class="card">
+        <h2>Alarmes personalizados</h2>
+        <div class="row">
+          <div class="n">
+            Início do descanso<small id="nB">Som padrão</small>
+          </div>
+          <div class="a">
+            <button data-p="break">▶</button
+            ><label class="btn"
+              >Escolher<input
+                type="file"
+                accept="audio/*"
+                data-k="break" /></label
+            ><button data-r="break">✕</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="n">Voltar ao foco<small id="nF">Som padrão</small></div>
+          <div class="a">
+            <button data-p="focus">▶</button
+            ><label class="btn"
+              >Escolher<input
+                type="file"
+                accept="audio/*"
+                data-k="focus" /></label
+            ><button data-r="focus">✕</button>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <h2>Tempos (minutos)</h2>
+        <div class="row">
+          <span class="n">Foco</span
+          ><input type="number" id="iF" min="1" max="120" value="20" />
+        </div>
+        <div class="row">
+          <span class="n">Descanso</span
+          ><input type="number" id="iB" min="1" max="60" value="5" />
+        </div>
+      </div>
+      <p class="hint">
+        Os sons e tempos ficam salvos neste navegador. Mantenha a aba aberta
+        para ouvir os alarmes.
+      </p>
+    </main>
+    <script src="js/script.js"></script>
+  </body>
 </html>
